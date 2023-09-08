@@ -1,0 +1,126 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 2023-09-02 21:40:42
+Description: Ticking player
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.world.inventory.Slot.remove(int)" because the return value of "java.util.Map.get(Object)" is null
+	at net.mcreator.carcanum.procedures.SmithingTableInventoryWhileThisGUIIsOpenTickProcedure.execute(SmithingTableInventoryWhileThisGUIIsOpenTickProcedure.java:15) ~[%23186!/:?] {re:classloading}
+	at net.mcreator.carcanum.world.inventory.ConstructTableMenu.onPlayerTick(ConstructTableMenu.java:275) ~[%23186!/:?] {re:classloading}
+	at net.mcreator.carcanum.world.inventory.__ConstructTableMenu_onPlayerTick_PlayerTickEvent.invoke(.dynamic) ~[%23186!/:?] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.3.jar%23106!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.3.jar%23106!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.3.jar%23106!/:?] {}
+	at net.minecraftforge.event.ForgeEventFactory.onPlayerPostTick(ForgeEventFactory.java:810) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23180%23187!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.tick(Player.java:288) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:447) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:264) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading}
+	at net.minecraft.network.Connection.tick(Connection.java:248) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:143) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:880) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.mcreator.carcanum.procedures.SmithingTableInventoryWhileThisGUIIsOpenTickProcedure.execute(SmithingTableInventoryWhileThisGUIIsOpenTickProcedure.java:15) ~[%23186!/:?] {re:classloading}
+	at net.mcreator.carcanum.world.inventory.ConstructTableMenu.onPlayerTick(ConstructTableMenu.java:275) ~[%23186!/:?] {re:classloading}
+	at net.mcreator.carcanum.world.inventory.__ConstructTableMenu_onPlayerTick_PlayerTickEvent.invoke(.dynamic) ~[%23186!/:?] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.3.jar%23106!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.3.jar%23106!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.3.jar%23106!/:?] {}
+	at net.minecraftforge.event.ForgeEventFactory.onPlayerPostTick(ForgeEventFactory.java:810) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23180%23187!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.tick(Player.java:288) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+-- Player being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.server.level.ServerPlayer)
+	Entity ID: 221
+	Entity Name: Dev
+	Entity's Exact location: 0.19, 111.00, -11.31
+	Entity's Block location: World: (0,111,-12), Section: (at 0,15,4 in 0,6,-1; chunk contains blocks 0,-64,-16 to 15,319,-1), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,-64,-512 to 511,319,-1)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:447) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:264) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading}
+	at net.minecraft.network.Connection.tick(Connection.java:248) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:143) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:880) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Mac OS X (x86_64) version 14.0
+	Java Version: 17.0.5, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 451340304 bytes (430 MiB) / 1620049920 bytes (1545 MiB) up to 2147483648 bytes (2048 MiB)
+	CPUs: 8
+	Processor Vendor: Apple Inc.
+	Processor Name: Apple M2
+	Identifier: Apple Inc. Family 0x573b5eec Model 0 Stepping 0
+	Microarchitecture: x86_64 Rosetta 2 (Virtual Westmere)
+	Frequency (GHz): 24.00
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 8
+	Graphics card #0 name: Apple M2
+	Graphics card #0 vendor: Apple (0x106b)
+	Graphics card #0 VRAM (MB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Memory slot #0 capacity (MB): 0.00
+	Memory slot #0 clockSpeed (GHz): 0.00
+	Memory slot #0 type: unknown
+	Virtual memory max (MB): 13312.00
+	Virtual memory used (MB): 11480.89
+	Swap memory total (MB): 5120.00
+	Swap memory used (MB): 4514.63
+	JVM Flags: 1 total; -Xss1M
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/221, l='ServerLevel[New World]', x=0.19, y=111.00, z=-11.31]]
+	Data Packs: vanilla, mod:forge, mod:carcanum
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: MOD_DEV
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.|Minecraft                     |minecraft                     |1.19.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		                                                  |Forge                         |forge                         |43.2.0              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Capital ARcanum               |carcanum                      |1.0.0               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 0c986baa-3e27-4dd1-ba70-a82ae593f672
+	FML: 43.2
+	Forge: net.minecraftforge:43.2.0

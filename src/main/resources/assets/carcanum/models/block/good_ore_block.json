@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "carcanum:blocks/goodore_ore_block",
+    "particle": "carcanum:blocks/goodore_ore_block"
+  },
+  "render_type": "solid"
+}

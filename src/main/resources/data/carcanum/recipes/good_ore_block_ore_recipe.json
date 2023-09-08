@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "carcanum:good_ore_block"
+    }
+  ],
+  "result": {
+    "item": "carcanum:good_ore_dust",
+    "count": 9
+  }
+}

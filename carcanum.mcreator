@@ -1,0 +1,457 @@
+{
+  "mod_elements": [
+    {
+      "name": "Goodtable",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goodtable",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/carcanum/blockstates/goodtable.json",
+          "src/main/java/net/mcreator/carcanum/block/entity/GoodtableBlockEntity.java",
+          "src/main/resources/assets/carcanum/models/item/goodtable.json",
+          "src/main/resources/assets/carcanum/models/block/goodtable.json",
+          "src/main/java/net/mcreator/carcanum/block/GoodtableBlock.java"
+        ]
+      },
+      "path": "~/Smithing Table"
+    },
+    {
+      "name": "ObsidianPickaxe",
+      "type": "tool",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "obsidian_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/carcanum/models/item/obsidian_pickaxe.json",
+          "src/main/java/net/mcreator/carcanum/item/ObsidianPickaxeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "SmithingTableInventoryWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smithing_table_inventory_while_this_gui_is_open_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/carcanum/procedures/SmithingTableInventoryWhileThisGUIIsOpenTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Smithing Table"
+    },
+    {
+      "name": "SmithingTableTakenFromSlot",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smithing_table_taken_from_slot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/carcanum/procedures/SmithingTableTakenFromSlotProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Smithing Table"
+    },
+    {
+      "name": "SmithingTableGUIClosed",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smithing_table_gui_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/carcanum/procedures/SmithingTableGUIClosedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Smithing Table"
+    },
+    {
+      "name": "RecipeSmithingObsidianPickaxe",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recipe_smithing_obsidian_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/carcanum/procedures/RecipeSmithingObsidianPickaxeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Smithing Table"
+    },
+    {
+      "name": "RecipeObsidianPickaxe",
+      "type": "tag",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recipe_obsidian_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/carcanum/tags/items/recipe_obsidian_pickaxe.json"
+        ]
+      },
+      "path": "~/Smithing Table"
+    },
+    {
+      "name": "ConstructTable",
+      "type": "gui",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "construct_table",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/carcanum/world/inventory/ConstructTableMenu.java",
+          "src/main/java/net/mcreator/carcanum/client/gui/ConstructTableScreen.java",
+          "src/main/java/net/mcreator/carcanum/network/ConstructTableSlotMessage.java"
+        ]
+      },
+      "path": "~/Smithing Table"
+    },
+    {
+      "name": "TagCraftingObsidian1",
+      "type": "tag",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tag_crafting_obsidian_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/carcanum/tags/items/tag_crafting_obsidian.json"
+        ]
+      },
+      "path": "~/Smithing Table"
+    },
+    {
+      "name": "RecipeConstructStickTest",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recipe_construct_stick_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/carcanum/procedures/RecipeConstructStickTestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Smithing Table"
+    },
+    {
+      "name": "TagCraftingStick2",
+      "type": "tag",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tag_crafting_stick_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/carcanum/tags/items/tag_crafting_stick_2.json"
+        ]
+      },
+      "path": "~/Smithing Table"
+    },
+    {
+      "name": "GoodOreDust",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_ore_dust",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/carcanum/item/GoodOreDustItem.java",
+          "src/main/resources/assets/carcanum/models/item/good_ore_dust.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodOreOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_ore_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/carcanum/models/block/good_ore_ore.json",
+          "src/main/resources/assets/carcanum/blockstates/good_ore_ore.json",
+          "src/main/resources/assets/carcanum/models/item/good_ore_ore.json",
+          "src/main/resources/data/carcanum/forge/biome_modifier/good_ore_ore_biome_modifier.json",
+          "src/main/java/net/mcreator/carcanum/world/features/ores/GoodOreOreFeature.java",
+          "src/main/java/net/mcreator/carcanum/block/GoodOreOreBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "GoodOreBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_ore_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/carcanum/block/GoodOreBlockBlock.java",
+          "src/main/resources/assets/carcanum/blockstates/good_ore_block.json",
+          "src/main/resources/assets/carcanum/models/block/good_ore_block.json",
+          "src/main/resources/assets/carcanum/models/item/good_ore_block.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodOreOreBlockRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_ore_ore_block_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/carcanum/recipes/good_ore_ore_block_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodOreBlockOreRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_ore_block_ore_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/carcanum/recipes/good_ore_block_ore_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodOreOreSmelting",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_ore_ore_smelting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/carcanum/recipes/good_ore_ore_smelting.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodPickaxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/carcanum/item/GoodPickaxeItem.java",
+          "src/main/resources/assets/carcanum/models/item/good_pickaxe.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodAxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/carcanum/models/item/good_axe.json",
+          "src/main/java/net/mcreator/carcanum/item/GoodAxeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "GoodSword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/carcanum/item/GoodSwordItem.java",
+          "src/main/resources/assets/carcanum/models/item/good_sword.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodShovel",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_shovel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/carcanum/item/GoodShovelItem.java",
+          "src/main/resources/assets/carcanum/models/item/good_shovel.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodHoe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_hoe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/carcanum/models/item/good_hoe.json",
+          "src/main/java/net/mcreator/carcanum/item/GoodHoeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "GoodPickaxeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_pickaxe_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/carcanum/recipes/good_pickaxe_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodAxeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_axe_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/carcanum/recipes/good_axe_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodSwordRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_sword_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/carcanum/recipes/good_sword_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodShovelRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_shovel_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/carcanum/recipes/good_shovel_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "GoodHoeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "good_hoe_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/carcanum/recipes/good_hoe_recipe.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.carcanum.obsidian_pickaxe": "Obsidian Pickaxe",
+      "item.carcanum.good_pickaxe": "Good Pickaxe",
+      "item.carcanum.good_shovel": "Good Shovel",
+      "item.carcanum.good_axe": "Good Axe",
+      "gui.carcanum.construct_table.tool_construct_name": "Name of tool",
+      "item.carcanum.good_ore_dust": "GoodOre",
+      "block.carcanum.good_ore_block": "Block of GoodOre",
+      "block.carcanum.good_ore_ore": "GoodOre Ore",
+      "item.carcanum.good_hoe": "Good Hoe",
+      "block.carcanum.goodtable": "Goodtable",
+      "item.carcanum.good_sword": "Good Sword",
+      "item.carcanum.buable": "Buable"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Smithing Table",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "carcanum",
+    "modName": "Capital ARcanum",
+    "version": "1.0.0",
+    "author": "alex, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.carcanum",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300110610
+}

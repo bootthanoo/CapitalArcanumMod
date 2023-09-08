@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GGG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "carcanum:good_ore_dust"
+    }
+  },
+  "result": {
+    "item": "carcanum:good_ore_block",
+    "count": 1
+  }
+}

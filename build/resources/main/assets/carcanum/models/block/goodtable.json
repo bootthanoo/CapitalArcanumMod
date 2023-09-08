@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "carcanum:blocks/blocktop",
+    "up": "carcanum:blocks/blocktop",
+    "north": "carcanum:blocks/blockside",
+    "east": "carcanum:blocks/blockside",
+    "south": "carcanum:blocks/blockside",
+    "west": "carcanum:blocks/blockside",
+    "particle": "carcanum:blocks/blocktop"
+  },
+  "render_type": "cutout_mipped"
+}
